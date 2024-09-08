@@ -18,4 +18,43 @@ body {
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
+}
+
+.kolom-utama {
+    flex: 2;
+    order: 2;
+    background-color: lightcoral;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+    background-color: lightyellow;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+    background-color: lightgray;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+h2,h3 {
+    margin-top: 0;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    margin-bottom: 10px;
+}
+ul li a {
+    text-decoration: none;
+    color: #333;
 }
