@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Form Validasi</title>
+    <style>
+        body {
+            color: red;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 50x auto; 
+            gap: 10px;
+            align-items: center;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: row;
+            gap: 1px; 
+        }
+
+        label {
+            margin-right: 1px;
+        }
+
+        input[type="text"] {
+            width: 150px; 
+        }
+        input[type="date"] {
+            width: 100px; 
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+        }
+
+        .full-width {
+            grid-column: span 2; 
+        }
+    </style>
+    <script>
+        function formValidasi() {
+            var lakiLaki = document.getElementById('laki-laki');
+            var wanita = document.getElementById('wanita');
+            if (!lakiLaki.checked && !wanita.checked) {
+                alert("Pilih salah satu jenis kelamin.");
+                return false;
+            } else if (lakiLaki.checked && wanita.checked) {
+                alert("Hanya boleh memilih satu jenis kelamin.");
+                return false;
+            }
+
+            var swasta = document.getElementById('swasta');
+            var pns = document.getElementById('pns');
+            var lainPekerjaan = document.getElementById('lain-pekerjaan');
+            if (!swasta.checked && !pns.checked && !lainPekerjaan.checked) {
+                alert("Pilih salah satu pekerjaan.");
+                return false;
+            } else if ((swasta.checked && pns.checked) || 
+                       (swasta.checked && lainPekerjaan.checked) || 
+                       (pns.checked && lainPekerjaan.checked)) {
+                alert("Hanya boleh memilih satu pekerjaan.");
+                return false;
+            }
+
+            var berenang = document.getElementById('berenang');
+            var berlari = document.getElementById('berlari');
+            var lainHobi = document.getElementById('lain-hobi');
+            if (!berenang.checked && !berlari.checked && !lainHobi.checked) {
+                alert("Pilih minimal satu hobi.");
+                return false;
+            }
+
+            var agree = document.getElementById('agree');
+            if (!agree.checked) {
+                alert("Anda harus mencentang untuk mengirimkan data.");
+                return false;
+            }
+
+            alert("Formulir berhasil dikirim!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Data Diri</h2>
+    <form class="form-grid" onsubmit="return formValidasi()">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama">
+
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat"></textarea>
+
+        <label for="tanggal_lahir">Tanggal Lahir</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+
+        <label>Jenis Kelamin</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="laki-laki" name="gender" value="Laki-Laki">
+            <label for="laki-laki">Laki-Laki</label>
+
+            <input type="checkbox" id="wanita" name="gender" value="Wanita">
+            <label for="wanita">Wanita</label>
+        </div>
+
+        <label>Hobby</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="berenang" name="hobby" value="Berenang">
+            <label for="berenang">Berenang</label>
+
+            <input type="checkbox" id="berlari" name="hobby" value="Berlari">
+            <label for="berlari">Berlari</label>
+
+            <input type="checkbox" id="lain-hobi" name="hobby" value="Lain-Lain">
+            <label for="lain-hobi">Lain-Lain</label>
+        </div>
+
+        <label>Pekerjaan</label>
+        <div class="checkbox-group">
+            <input type="checkbox" id="swasta" name="pekerjaan" value="Swasta">
+            <label for="swasta">Swasta</label>
+
+            <input type="checkbox" id="pns" name="pekerjaan" value="PNS">
+            <label for="pns">PNS</label>
+
+            <input type="checkbox" id="lain-pekerjaan" name="pekerjaan" value="Lain-Lain">
+            <label for="lain-pekerjaan">Lain-Lain</label>
+        </div>
+
+        <div class="full-width">
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">Check Jika anda akan mengirimkan data ini</label>
+        </div>
+
+        <div class="full-width">
+            <input type="submit" value="Cek!">
+        </div>
+    </form>
+</body>
+</html>
