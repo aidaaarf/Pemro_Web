@@ -27,6 +27,9 @@ $assignKali = $a *= $b;
 $assignBagi = $a /= $b;
 $assignSisaBagi = $a %= $b;
 
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+
 
 echo "Operator Aritmatika <br><br>";
 echo "Hasil Tambah = {$hasilTambah} <br>";
@@ -56,5 +59,9 @@ echo "Hasil Assign Kurang = {$assignKurang} <br>";
 echo "Hasil Assign Kali = {$assignKali} <br>";
 echo "Hasil Assign Bagi = {$assignBagi} <br>";
 echo "Hasil Assign SisaBagi = {$assignSisaBagi} <br>";
+
+echo "<br><br>Operator Identik <br><br>";
+echo "Hasil Identik = {$hasilIdentik} <br>";
+echo "Hasil Tidak Identik= {$hasilTidakIdentik} <br>"
 
 ?>
