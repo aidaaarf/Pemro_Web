@@ -21,6 +21,12 @@ $hasilOr = $a || $b;
 $hasilNotA = !$a;
 $hasilNotB = !$b;
 
+$assignJumlah = $a += $b;
+$assignKurang = $a -= $b;
+$assignKali = $a *= $b;
+$assignBagi = $a /= $b;
+$assignSisaBagi = $a %= $b;
+
 
 echo "Operator Aritmatika <br><br>";
 echo "Hasil Tambah = {$hasilTambah} <br>";
@@ -43,4 +49,12 @@ echo "Hasil And = {$hasilAnd} <br>";
 echo "Hasil Or = {$hasilOr} <br>";
 echo "Hasil Not A = {$hasilNotA} <br>";
 echo "Hasil Not B = {$hasilNotB} <br>";
+
+echo "<br><br>Operator Assignment <br><br>";
+echo "Hasil Assign Jumlah = {$assignJumlah} <br>";
+echo "Hasil Assign Kurang = {$assignKurang} <br>";
+echo "Hasil Assign Kali = {$assignKali} <br>";
+echo "Hasil Assign Bagi = {$assignBagi} <br>";
+echo "Hasil Assign SisaBagi = {$assignSisaBagi} <br>";
+
 ?>
