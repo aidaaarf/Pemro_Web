@@ -62,6 +62,17 @@ echo "Hasil Assign SisaBagi = {$assignSisaBagi} <br>";
 
 echo "<br><br>Operator Identik <br><br>";
 echo "Hasil Identik = {$hasilIdentik} <br>";
-echo "Hasil Tidak Identik= {$hasilTidakIdentik} <br>"
+echo "Hasil Tidak Identik= {$hasilTidakIdentik} <br>";
+
+$kursi = 45;
+$sold = 28;
+
+echo "<br><br>Soal Cerita <br>";
+$kursiKosong = $kursi - $sold;
+echo "<br>Kursi Tersedia: {$kursi}<br>";
+echo "Kursi Sold: {$sold}<br>";
+echo "Kursi yang masih kosong pada restoran adalah:  {$kursiKosong}<br>";
+$persenKursi = ($kursiKosong / $kursi) * 100;
+echo "Persen Kursi Kosong: {$persenKursi}%<br>";
 
 ?>
