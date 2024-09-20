@@ -44,13 +44,34 @@ foreach ($skorUjian as $skor) {
 echo "<br><br>Total skor ujian adalah: $totalSkor<br><br>";
 
 // foreach, if
-$nilaiSiswa = [85,92,58,64,90,55,88,79,70,96];
+$nilaiSiswa1 = [85,92,58,64,90,55,88,79,70,96];
 
-foreach ($nilaiSiswa as $nilai) {
+foreach ($nilaiSiswa1 as $nilai) {
     if ($nilai < 60) {
         echo "Nilai: $nilai (Tidak lulus) <br>";
         continue;
     }
     echo "Nilai: $nilai (lulus) <br>";
 }
+
+// soal cerita
+$nilaiSiswa2 = [85,92,78,64,90,75,88,79,70,96];
+for ($i = 0; $i < 2; $i++) {
+
+    $nilaiTertinggi = max($nilaiSiswa2);
+    $indexTertinggi = array_search($nilaiTertinggi, $nilaiSiswa2);
+    unset($nilaiSiswa2[$indexTertinggi]);
+
+ 
+    $nilaiTerendah = min($nilaiSiswa2);
+    $indexTerendah = array_search($nilaiTerendah, $nilaiSiswa2);
+    unset($nilaiSiswa2[$indexTerendah]);
+}
+
+$totalNilai = array_sum($nilaiSiswa2);
+
+echo "<br>Nilai yang digunakan: " . implode(", ", $nilaiSiswa2) . "<br>";
+echo "Total nilai setelah mengabaikan dua nilai tertinggi dan dua nilai terendah: $totalNilai";
 ?>
+
+
