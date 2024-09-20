@@ -88,6 +88,12 @@ $diskon = 20;
 
     echo "<br><br>Harga yang harus dibayar Setelah diskon adalah: Rp{$hargaJadi}.000<br>";
 
-?>
+    // soal 4.8
+    $poin = 400; 
+    echo "Total skor pemain adalah: $poin <br>";
+    $hadiah = ($poin > 500) ? "YA" : "TIDAK";
+    echo "Apakah pemain mendapatkan hadiah tambahan? $hadiah";
+    ?>
+    
 
 
