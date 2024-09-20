@@ -11,6 +11,7 @@ if ($nilaiNumerik >= 90 && $nilaiNumerik <= 100) {
     echo "Nilai huruf: D";
 }
 
+// while
 $jarakSaatIni = 0;
 $jarakTarget = 500;
 $peningkatanHarian = 30;
@@ -21,4 +22,15 @@ while ($jarakSaatIni < $jarakTarget) {
     $hari++;
 }
 echo "<br><br>Atlet tersebut memerlukan $hari hari untuk mencapai jarak 500 kilometer.";
+
+// for
+$jumlahLahan = 10;
+$tanamanPerlahan = 5;
+$buahPerTanaman = 10;
+$jumlahBuah = 0;
+
+for ($i = 1; $i <= $jumlahLahan ; $i++) { 
+    $jumlahBuah += ($tanamanPerlahan * $buahPerTanaman);
+}
+echo "<br><br>Jumlah buah yang akan dipanen adalah: $jumlahBuah";
 ?>
