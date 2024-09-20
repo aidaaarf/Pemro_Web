@@ -69,9 +69,25 @@ for ($i = 0; $i < 2; $i++) {
 }
 
 $totalNilai = array_sum($nilaiSiswa2);
+$rataRata = $totalNilai  / (count($nilaiSiswa2));
 
 echo "<br>Nilai yang digunakan: " . implode(", ", $nilaiSiswa2) . "<br>";
 echo "Total nilai setelah mengabaikan dua nilai tertinggi dan dua nilai terendah: $totalNilai";
+echo "<br>Rata-rata nilai Siswa {$rataRata}";
+
+// soal 4.7
+$hargaBeli = 120.000;
+$diskon = 20;
+
+    if ($hargaBeli > 100.000) {
+        $hargaDiskon = $hargaBeli * ($diskon/100);
+        $hargaJadi = $hargaBeli - $hargaDiskon;
+    } else {
+        $hargaBeli;
+    }
+
+    echo "<br><br>Harga yang harus dibayar Setelah diskon adalah: Rp{$hargaJadi}.000<br>";
+
 ?>
 
 
