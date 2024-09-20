@@ -1,4 +1,5 @@
 <?php
+// soal 5.1
 $nilaiSiswa = [85, 92, 78, 64, 90, 55, 88, 79, 70, 96];
 $nilaiLulus = [];
 
@@ -9,6 +10,7 @@ foreach ($nilaiSiswa as $nilai) {
 }
 echo "Daftar nilai siswa yang lulus: " . implode(',', $nilaiLulus);
 
+// soal 5.2
 $daftarKaryawan = [
     ['Alice', 7],
     ['Bob', 3],
@@ -24,3 +26,28 @@ foreach ($daftarKaryawan as $karyawan) {
 }
 echo "<br><br>Daftar Karyawan dengan pengalaman kerja lebih dari 5 tahun: " . implode(' , ',
 $karyawanPengalamanLimaTahun);
+
+// soal 5.3
+$daftarNilai = [
+    'Matematika' => [
+        ['Alice', 85],
+        ['Bob', 93],
+        ['Charlie', 78],
+    ],
+    'Fisika' => [
+        ['Alice', 90],
+        ['Bob', 88],
+        ['Charlie', 75],
+    ],
+    'Kimia' => [
+        ['Alice', 92],
+        ['Bob', 80],
+        ['Charlie', 85],
+    ],
+];
+
+$mataKuliah = 'Fisika';
+echo "<br><br>Daftar nilai Mahasiswa dalam mata kuliah $mataKuliah: <br>";
+foreach ($daftarNilai[$mataKuliah] as $nilai) {
+    echo "Nama: {$nilai[0]}, Nilai: {$nilai[1]} <br>";
+}
