@@ -55,7 +55,11 @@ echo "<hr>";
 function tampilanMenuBertingkat (array $menu){
     echo "<ul>";
     foreach ($menu as $key => $item) {
-        echo "<li>{$item['nama']}</li>";
+        echo "<li>{$item['nama']}";
+        if (isset($item['subMenu']) && is_array($item['subMenu'])) {
+            tampilanMenuBertingkat($item['subMenu']);
+        }
+        echo "</li>";
     }
     echo "</ul>";
 }
