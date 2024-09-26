@@ -16,4 +16,48 @@ function tampilanAgka (int $jumlah, int $indeks = 1) {
     }
 }
 tampilanAgka(20);
+
+// menu bertingkat
+$menu = [
+    [
+        "nama" => "Bercanda"
+    ],
+    [
+        "nama" => "Berita",
+        "subMenu" => [
+            [
+                "nama" => "Wisata",
+                "subMenu" => [
+                    [
+                        "nama" => "Pantai"
+                    ],
+                    [
+                        "nama" => "Gunung"
+                    ]
+                ]
+            ],
+            [
+                "nama" => "Kuliner"
+            ],
+            [
+                "nama" => "Hiburan"
+            ]
+        ]
+    ],
+    [
+        "nama" => "Tentang"
+    ],
+    [
+        "nama" => "Kontak"
+    ],
+];
+echo "<hr>";
+function tampilanMenuBertingkat (array $menu){
+    echo "<ul>";
+    foreach ($menu as $key => $item) {
+        echo "<li>{$item['nama']}</li>";
+    }
+    echo "</ul>";
+}
+tampilanMenuBertingkat($menu);
 ?>
