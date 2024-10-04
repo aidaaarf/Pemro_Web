@@ -53,10 +53,14 @@ for ($i=1; $i <= 25; $i++) {
 
 function tampilkanMenuBertingkat (array $menu){
     echo "<ul>";
-    foreach ($menu as $key => $item){
-        echo "<li>{$item['nama']}</li>";
+    foreach ($menu as $key => $item) {
+        echo "<li>{$item['nama']}";
+        if (isset($item['subMenu']) && is_array($item['subMenu'])) {
+            tampilkanMenuBertingkat($item['subMenu']);
+        }
+        echo "</li>";
     }
     echo "</ul>";
 }
-tampilkanMenuBertingkat($menu)
+tampilkanMenuBertingkat($menu);
   ?>
