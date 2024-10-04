@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 3px solid lightblue;
+}
+
+#flip, .average {
+    padding: 5px;
+    text-align: center;
+    background-color: lightcyan;
+    border: solid 2px lightblue;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: lightcyan;
+}
+
+
+
