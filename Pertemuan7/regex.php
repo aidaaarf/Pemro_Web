@@ -23,7 +23,7 @@ $new_text = preg_replace($pattern, $replacement, $text);
 echo "<br>";
 echo $new_text;
 
-$pattern = '/go?d/'; // cocokkan "god", "good", "gooood"
+$pattern = '/go{1,2}d/'; // cocokkan "god", "good", "gooood"
 $text = 'god is good';
 echo "<br>";
 if (preg_match($pattern, $text, $matches)) {
