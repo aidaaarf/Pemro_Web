@@ -44,8 +44,11 @@
                 }
 
                 
-                  if (password === "") {
+                if (password === "") {
                     $("#password-error").text("Password harus diisi.");
+                    valid = false;
+                } else if (password.length < 8) {
+                    $("#password-error").text("Password harus terdiri dari minimal 8 karakter.");
                     valid = false;
                 } else {
                     $("#password-error").text("");
