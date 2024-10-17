@@ -1,6 +1,6 @@
 <?php
 // Lokasi penyimpanan file yang diunggah
-$targetDirectory = "documents/";
+$targetDirectory = "images/";
 
 // Periksa apakah direktori penyimpanan ada, jika tidak maka buat
 if (!file_exists($targetDirectory)) {
@@ -9,6 +9,7 @@ if (!file_exists($targetDirectory)) {
 
 if ($_FILES['files']['name'][0]) {
     $totalFiles = count($_FILES['files']['name']);
+    $allowedExtensions = array("jpg", "jpeg", "png", "gif"); // Ekstensi file gambar yang diizinkan
 
     // Loop melalui semua file yang diunggah
     for ($i = 0; $i < $totalFiles; $i++) {
