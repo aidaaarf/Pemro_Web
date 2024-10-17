@@ -7,9 +7,11 @@ if (isset($_POST["submit"])) {
     $allowedExtensions = array("jpg","jpeg","png","gif");
     $maxsize = 5*1024*1024;
 
-    if (in_array($filetype, $allowedExtensions) && $_FILES["myfile"]["size"]<=$mazxsize) {
+    if (in_array($filetype, $allowedExtensions) && $_FILES["myfile"]["size"]<=$maxsize) {
         if (move_uploaded_file($_FILES["myfile"]["tmp_name"], $targetfile)) {
             echo "File berhasil diunggah.";
+            echo "<br>";
+            echo '<img src="./uploads/miaw.jpeg" width="200">';
         } else {
             echo "Gagal mengunggah file.";
         }
