@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ubuntu:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+/* LOGIN */
+.login-box {
+  width: 420px;
+  height: 500px;
+  background: #EFC3CA;
+  color: #000;
+  border-radius: 10%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.login-title {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+.auth-title {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 20px;
+}
+.login-box a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6a6262;
+}
+.login-box a:hover {
+  color: #5335d7;
+}
+/* LOGIN */
+
+
+/*REGISTER*/
+.register-box {
+  width: 50%;
+  background: #EFC3CA;
+  color: black;
+  top: 65%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.register-box a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6a6262;
+}
+/*login bawah saat regis*/
+.register-box a:hover {
+  color: #5335d7;
+}
+/*REGISTER*/
+
+/*ATAS*/
+.wrapper .top_navbar {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.wrapper .top_navbar .logo {
+  width: 250px;
+  height: 100%;
+  background: #C9838E;
+  border-bottom: 5px #fff;
+}
+.wrapper .top_navbar .logo a {
+  display: block;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  color: #fff;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.wrapper .top_navbar .top_menu {
+  width: calc(100% - 250px);
+  height: 100%;
+  background: #fff;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*ATAS*/
+
+/*SIDEBAR*/
+.main_body .sidebar_menu {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  background: #C9838E;
+  width: 250px;
+  height: 100%;
+  transition: all 0.3s linear;
+}
+
+.main_body .sidebar_menu .inner__sidebar_menu {
+  position: relative;
+  padding-top: 60px;
+}
+
+.main_body .sidebar_menu ul li a {
+  color: #fff;
+  font-size: 18px;
+  padding: 20px 35px;
+  display: block;
+  white-space: nowrap;
+}
+
+.main_body .sidebar_menu ul li a .icon {
+  margin-right: 8px;
+}
+
+.main_body .sidebar_menu ul li a span {
+  display: inline-block;
+}
+
+.main_body .sidebar_menu ul li a:hover {
+  background: #99626B;
+  color: #fff;
+}
+
+.main_body .sidebar_menu ul li a.active {
+  background: #99626B;
+  color: #fff;
+}
+
+.wrapper.active .sidebar_menu {
+  width: 100px;
+}
+
+.wrapper.active .sidebar_menu ul li a .list {
+  display: none;
+}
+
+/*SIDEBAR*/
+
+/*BUTTON*/
+.action {
+  display: flex;
+  justify-content: center;
+}
+
+.primary {
+  background-color: #EFC3CA;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.success {
+  background-color: #a2de96;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.warning {
+  background-color: #ffcd3c;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.delete {
+  background-color: red;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+/*BUTTON*/
+
+
+.wrapper.active .main_body .container {
+  width: calc(100% - 100px);
+  margin-left: 100px;
+}
+
+.container {
+  width: calc(100% - 250px);
+  margin-top: 65px;
+  margin-left: 250px;
+  padding: 25px 40px;
+  transition: all 0.3s linear;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  border-radius: 10px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #CC969F;
+  color: white;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #CC969F;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-warning {
+  color: white;
+  background-color: #ffcd3c;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-success {
+  color: white;
+  background-color: #a2de96;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
+}
+.btn-success:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #fff;
+}
+.btn-auth {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #99626B;
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.btn-auth:hover {
+  cursor: pointer;
+  background: #ABE096;
+  color: #000;
+}
+
+
+/*FORM*/
+.form {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin: 20px 15px;
+}
+
+.form-group-register {
+  margin: 0 15px;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.input-search {
+  color: black;
+  padding: 8px;
+  border-color: #3421c0;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.input-text {
+  width: 100%;
+  color: black;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+}
+
+.input-register-text {
+  width: 100%;
+  margin-bottom: 20px;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+/*FORM*/
+
